@@ -14,3 +14,6 @@ RESO Power BI Data connectors is code to generate a custom data connector files 
 </ol>
 
 Custom Data Connectors in Power BI are still under preview. Please enable the feature under File | Options & Settings | Options | Preview Features.
+
+<h2>Notes</h2>
+This data connector only contains 'Active' associations. If you want to pull all data, remove the expresion statement #"Filtered Rows" = Table.SelectRows(#"Renamed Columns", each ([Active] = "1")).
