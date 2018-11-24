@@ -4,17 +4,18 @@ section RESO_OUID_Power_BI_Data_Connector;
 [DataSource.Kind="RESO_OUID_Power_BI_Data_Connector", Publish="RESO_OUID_Power_BI_Data_Connector.Publish"]
 shared RESO_OUID_Power_BI_Data_Connector.Contents = (optional message as text) =>
     let
-        _message = if (message <> null) then message else "(no message)",
-        a = "Hello from RESO_OUID_Power_BI_Data_Connector: " & _message
-    in
-        a;
+        Source = Xml.Tables(Web.Contents("https://reso.org/ouid/"))
+ //       #"Changed Type" = Table.TransformColumnTypes(Source,{{"copyright", type text}}),
+ //       organization = #"Changed Type"{0}[organization],
+ //       #"Changed Type1" = Table.TransformColumnTypes(organization,{{"name", type text}, {"ouid", type text}, {"assoc2mls", type text}, {"type", type text}, {"active", Int64.Type}, {"url", type text}, {"updated", type date}, {"statuschangedate", type date}, {"notes", type text}}),
+ //       #"Expanded location" = Table.ExpandTableColumn(#"Changed Type1", "location", {"address", "city", "state", "zip", "country"}, {"location.address", "location.city", "location.state", "location.zip", "location.country"})
+        in
+ //           #"Expanded location"; 
+            Source;
 
 // Data Source Kind description
 RESO_OUID_Power_BI_Data_Connector = [
     Authentication = [
-        // Key = [],
-        // UsernamePassword = [],
-        // Windows = [],
         Implicit = []
     ],
     Label = Extension.LoadString("DataSourceLabel")
