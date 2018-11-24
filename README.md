@@ -13,7 +13,7 @@ RESO Power BI Data connectors is code to generate a custom data connector files 
     <li><a href="https://marketplace.visualstudio.com/items?itemName=lennyomg.AutoDeploy" rel="nofollow">Auto Deploy Extension for Visual Studio</a></li>
 </ol>
 
-Custom Data Connectors in Power BI are still under preview. Please enable the feature under File | Options & Settings | Options | Preview Features.
+Custom Data Connectors in Power BI are still under preview in the Power BI Desktop and <a href="https://docs.microsoft.com/en-us/power-bi/service-gateway-custom-connectors" rel="nofollow">Power BI On-premise Gateway</a>. Please enable the feature under File | Options & Settings | Options | Preview Features.
 
 <h2>Notes</h2>
 This data connector only contains 'Active' associations. If you want to pull all data, remove the expresion statement #"Filtered Rows" = Table.SelectRows(#"Renamed Columns", each ([Active] = "1")).
