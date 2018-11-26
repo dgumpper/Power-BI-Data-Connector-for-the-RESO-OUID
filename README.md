@@ -1,9 +1,8 @@
-# Real Estate Standard Organization (RESO) - Organization Unique Identifier (OUID) Power Bi Data Connectors 
+# Microsoft Power Bi Custom Data Connector for the Organization Unique Identifier (OUID) from the Real Estate Standards Organization (RESO) Web API.
+
 Microsoft Power BI Custom Data Connector for RESO - OUID
 
 Microsoft Power BI custom data connectors are built to easily access and refresh data in Power BI for data analysis and visualizations.
-
-RESO Power BI Data connectors is code to generate a custom data connector files which easily accesses databases from Microsoft Power BI that are compliant to the RESO Data Dictionary.
 
 <h2>Requirements:</h2>
 
